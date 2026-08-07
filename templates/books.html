@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>पुस्तके | किशोर बाळासाहेब माणकापुरे</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/books.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="books-navbar">
+
+    <div class="books-nav-container">
+
+        <a href="/" class="books-brand">
+
+            <div class="books-brand-name">
+                किशोर माणकापुरे
+            </div>
+
+            <div class="books-brand-subtitle">
+                अधिकृत लेखक वेबसाईट
+            </div>
+
+        </a>
+
+
+        <nav class="books-nav-links">
+
+            <a href="/">
+                मुख्यपृष्ठ
+            </a>
+
+            <a href="/author">
+                लेखक परिचय
+            </a>
+
+            <a href="/books" class="active">
+                पुस्तके
+            </a>
+
+            <a href="/awards">
+                पुरस्कार
+            </a>
+
+            <a href="/gallery">
+                गॅलरी
+            </a>
+
+            <a href="/contact">
+                संपर्क
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="books-hero">
+
+    <div class="books-hero-content">
+
+        <div class="books-small-title">
+            KISHOR MANAKAPURE
+        </div>
+
+        <h1>
+            माझी पुस्तके
+        </h1>
+
+        <div class="books-gold-line"></div>
+
+        <p>
+            विचारांना दिशा देणारे लेखन,
+            प्रेरणा देणारे अनुभव आणि
+            समाजप्रबोधनाची तळमळ यातून निर्माण झालेली
+            माझी लेखनसंपदा.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BOOKS ================= -->
+
+<main class="books-main">
+
+    <div class="books-heading">
+
+        <span>लेखनसंपदा</span>
+
+        <h2>
+            माझी प्रकाशित पुस्तके
+        </h2>
+
+        <p>
+            प्रत्येक पुस्तकामागे एक विचार,
+            एक अनुभव आणि समाजासाठी काहीतरी
+            सकारात्मक करण्याची भावना आहे.
+        </p>
+
+    </div>
+
+
+
+    <div class="books-grid">
+
+
+        <!-- ================= BOOK 1 ================= -->
+
+        <article class="book-card">
+
+            <div class="book-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/book1.jpg') }}"
+                    alt="विद्यार्थी दशेत महापुरुष अभ्यासताना"
+                >
+
+            </div>
+
+
+            <div class="book-content">
+
+                <div class="book-number">
+                    01
+                </div>
+
+                <div class="book-category">
+                    बालवाङ्मय
+                </div>
+
+                <h3>
+                    विद्यार्थी दशेत
+                    महापुरुष अभ्यासताना!
+                </h3>
+
+                <div class="book-line"></div>
+
+                <p>
+                    महाराष्ट्र राज्य शासनाच्या साहित्य आणि संस्कृती
+                    विभागाकडून यदुनात थत्ते पुरस्काराने सन्मानित
+                    झालेले हे पुस्तक महापुरुषांच्या विचारातून
+                    विद्यार्थ्यांना सकारात्मक वाटचालीची प्रेरणा देते.
+                </p>
+
+                <div class="book-details">
+
+                    <div>
+                        <strong>प्रकाशन</strong>
+                        <span>15 ऑगस्ट 2020</span>
+                    </div>
+
+                    <div>
+                        <strong>किंमत</strong>
+                        <span>₹60</span>
+                    </div>
+
+                </div>
+
+                <div class="book-available">
+                    उपलब्धता :
+                    अक्षरविश्व पुस्तकालय,
+                    कबनूर, इचलकरंजी
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= BOOK 2 ================= -->
+
+        <article class="book-card">
+
+            <div class="book-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/book2.jpg') }}"
+                    alt="पालकत्व एक आव्हान"
+                >
+
+            </div>
+
+
+            <div class="book-content">
+
+                <div class="book-number">
+                    02
+                </div>
+
+                <div class="book-category">
+                    सृजनशील पालकत्व
+                </div>
+
+                <h3>
+                    पालकत्व
+                    एक आव्हान
+                </h3>
+
+                <div class="book-line"></div>
+
+                <p>
+                    आपल्या पाल्याचे भविष्य उज्ज्वल घडविण्यासाठी
+                    प्रयत्न करणाऱ्या पालकांसमोर आजच्या काळात
+                    निर्माण होणारी आव्हाने आणि त्यावरचे
+                    पर्यायी मार्ग सांगणारे मार्गदर्शक पुस्तक.
+                </p>
+
+                <div class="book-details">
+
+                    <div>
+                        <strong>प्रकाशन</strong>
+                        <span>18 सप्टेंबर 2022</span>
+                    </div>
+
+                    <div>
+                        <strong>किंमत</strong>
+                        <span>₹100</span>
+                    </div>
+
+                </div>
+
+                <div class="book-available">
+                    उपलब्धता :
+                    अक्षरविश्व पुस्तकालय,
+                    कबनूर, इचलकरंजी व लेखकांकडे
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= BOOK 3 ================= -->
+
+        <article class="book-card">
+
+            <div class="book-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/book3.jpg') }}"
+                    alt="धडपड"
+                >
+
+            </div>
+
+
+            <div class="book-content">
+
+                <div class="book-number">
+                    03
+                </div>
+
+                <div class="book-category">
+                    आत्मचरित्र
+                </div>
+
+                <h3>
+                    धडपड
+                </h3>
+
+                <div class="book-line"></div>
+
+                <p>
+                    दारिद्र्य, संघर्ष आणि परिस्थितीशी लढत
+                    स्वतःची वाट निर्माण करणाऱ्या जीवनप्रवासाची
+                    प्रेरणादायी कहाणी. आईची साथ, संघर्षाची जिद्द
+                    आणि हार न मानण्याची शिकवण या पुस्तकातून मिळते.
+                </p>
+
+                <div class="book-details">
+
+                    <div>
+                        <strong>प्रकाशन</strong>
+                        <span>28 नोव्हेंबर 2023</span>
+                    </div>
+
+                    <div>
+                        <strong>किंमत</strong>
+                        <span>₹175</span>
+                    </div>
+
+                </div>
+
+                <div class="book-available">
+                    उपलब्धता :
+                    अक्षरविश्व पुस्तकालय,
+                    कबनूर, इचलकरंजी
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= BOOK 4 ================= -->
+
+        <article class="book-card">
+
+            <div class="book-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/book4.jpg') }}"
+                    alt="पडद्यामागची जातीव्यवस्था"
+                >
+
+            </div>
+
+
+            <div class="book-content">
+
+                <div class="book-number">
+                    04
+                </div>
+
+                <div class="book-category">
+                    दलित कथा
+                </div>
+
+                <h3>
+                    पडद्यामागची
+                    जातीव्यवस्था
+                </h3>
+
+                <div class="book-line"></div>
+
+                <p>
+                    भारत धर्मनिरपेक्ष झाला आणि जातीव्यवस्था
+                    संपली असे म्हणत असतानाही आधुनिक समाजात
+                    पडद्यामागे अस्तित्वात असलेल्या जातीव्यवस्थेचे
+                    वास्तव दाखविणारा कथासंग्रह.
+                </p>
+
+                <div class="book-details">
+
+                    <div>
+                        <strong>प्रकाशन</strong>
+                        <span>1 ऑगस्ट 2026</span>
+                    </div>
+
+                    <div>
+                        <strong>किंमत</strong>
+                        <span>₹200</span>
+                    </div>
+
+                </div>
+
+                <div class="book-available">
+                    उपलब्धता :
+                    अक्षरविश्व पुस्तकालय,
+                    कबनूर, इचलकरंजी
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="books-quote">
+
+    <div class="quote-inner">
+
+        <div class="quote-symbol">
+            “
+        </div>
+
+        <div>
+
+            <p>
+                समाजातील वेगवेगळ्या क्षेत्रात बदल करायचा असेल,
+                तर साहित्य निर्माण करणे आवश्यक आहे.
+            </p>
+
+            <span>
+                — किशोर बाळासाहेब माणकापुरे
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="books-footer">
+
+    <p>
+        © 2026 किशोर बाळासाहेब माणकापुरे
+        | सर्व हक्क राखीव
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

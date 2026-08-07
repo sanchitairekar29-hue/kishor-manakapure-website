@@ -1,0 +1,286 @@
+/* ================= AWARDS HERO ================= */
+
+.awards-hero {
+    min-height: 330px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 11, 20, 0.94),
+            rgba(2, 11, 20, 0.70)
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding-top: 90px;
+}
+
+.awards-overlay {
+    max-width: 850px;
+    padding: 50px 25px;
+}
+
+.small-title {
+    color: #f5b800;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.awards-overlay h1 {
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.awards-overlay .gold-line {
+    width: 100px;
+    height: 3px;
+    background: #f5b800;
+    margin: 15px auto 25px;
+}
+
+.awards-overlay > p:last-child {
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* ================= AWARDS SECTION ================= */
+
+.awards-section {
+    background: #f6f3ee;
+    padding: 70px 5%;
+}
+
+.awards-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* ================= AWARD CARD ================= */
+
+.award-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 32px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    border: 1px solid #eee5d8;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= ICON ================= */
+
+.award-icon {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    border-radius: 50%;
+
+    background: #fff7df;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 31px;
+
+    border: 1px solid #f1d68b;
+}
+
+
+/* ================= CONTENT ================= */
+
+.award-content {
+    flex: 1;
+}
+
+.award-year {
+    color: #a26b0d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    text-transform: uppercase;
+}
+
+.award-content h2 {
+    color: #111;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+.award-content p {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* ================= QUOTE ================= */
+
+.award-quote {
+    background: #f6f3ee;
+
+    padding: 0 5% 65px;
+}
+
+.quote-box {
+    max-width: 1150px;
+
+    margin: auto;
+
+    background: #fffaf2;
+
+    border: 1px solid #e9dfd0;
+
+    border-radius: 12px;
+
+    padding: 35px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.quote-mark {
+    font-size: 75px;
+
+    color: #b47b16;
+
+    line-height: 1;
+}
+
+.quote-box p {
+    font-size: 24px;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+
+    color: #222;
+}
+
+.quote-box span {
+    color: #a26b0d;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .awards-container {
+        grid-template-columns: 1fr;
+
+        max-width: 750px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .awards-hero {
+        min-height: 300px;
+
+        padding-top: 100px;
+    }
+
+    .awards-overlay h1 {
+        font-size: 40px;
+    }
+
+    .awards-overlay > p:last-child {
+        font-size: 16px;
+    }
+
+    .award-card {
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .award-icon {
+        margin-bottom: 5px;
+    }
+
+    .award-content h2 {
+        font-size: 21px;
+    }
+
+    .quote-box {
+        padding: 28px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .quote-mark {
+        font-size: 55px;
+    }
+
+    .quote-box p {
+        font-size: 19px;
+    }
+
+}

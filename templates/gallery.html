@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>गॅलरी | किशोर माणकापुरे</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <h2>किशोर माणकापुरे</h2>
+        <span>अधिकृत लेखक वेबसाईट</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">मुखपृष्ठ</a>
+
+        <a href="/about">लेखक परिचय</a>
+
+        <a href="/books">पुस्तके</a>
+
+        <a href="/awards">पुरस्कार</a>
+
+        <a href="/gallery" class="active">गॅलरी</a>
+
+        <a href="/contact">संपर्क</a>
+
+    </div>
+
+</nav>
+
+
+<!-- GALLERY HERO -->
+
+<section class="books-hero">
+
+    <div class="hero-overlay">
+
+        <h1>फोटो गॅलरी</h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+            लेखन, पुरस्कार, सामाजिक कार्य आणि
+            विविध कार्यक्रमांच्या काही आठवणी.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery-section">
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/author.jpg') }}"
+                alt="किशोर माणकापुरे"
+            >
+        </div>
+
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/book1.jpg') }}"
+                alt="पुस्तक"
+            >
+        </div>
+
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/book2.jpg') }}"
+                alt="पुस्तक"
+            >
+        </div>
+
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/book3.jpg') }}"
+                alt="धडपड"
+            >
+        </div>
+
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/book4.jpg') }}"
+                alt="पुस्तक"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 किशोर माणकापुरे | सर्व हक्क राखीव
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

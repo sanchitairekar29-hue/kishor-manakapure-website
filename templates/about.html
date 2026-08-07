@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>लेखक परिचय | किशोर बाळासाहेब माणकापुरे</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/about.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="about-navbar">
+
+    <div class="about-nav-container">
+
+        <a href="/" class="about-brand">
+
+            <div class="about-brand-name">
+                किशोर माणकापुरे
+            </div>
+
+            <div class="about-brand-subtitle">
+                अधिकृत लेखक वेबसाईट
+            </div>
+
+        </a>
+
+
+        <nav class="about-nav-links">
+
+            <a href="/">
+                मुख्यपृष्ठ
+            </a>
+
+            <a href="/author" class="active">
+                लेखक परिचय
+            </a>
+
+            <a href="/books">
+                पुस्तके
+            </a>
+
+            <a href="/awards">
+                पुरस्कार
+            </a>
+
+            <a href="/gallery">
+                गॅलरी
+            </a>
+
+            <a href="/contact">
+                संपर्क
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <div class="about-small-title">
+            ABOUT THE AUTHOR
+        </div>
+
+        <h1>
+            लेखक परिचय
+        </h1>
+
+        <div class="about-gold-line"></div>
+
+        <p>
+            लेखन, शिक्षण आणि समाजप्रबोधनाच्या माध्यमातून
+            सकारात्मक विचारांची वाटचाल.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AUTHOR INTRO ================= -->
+
+<section class="author-intro">
+
+    <div class="author-intro-container">
+
+
+        <!-- PHOTO -->
+
+        <div class="author-photo-area">
+
+            <div class="author-photo-frame">
+
+                <img
+                    src="{{ url_for('static', filename='images/author.jpg') }}"
+                    alt="किशोर बाळासाहेब माणकापुरे"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="author-intro-content">
+
+            <div class="section-label">
+                लेखक आणि शिक्षक
+            </div>
+
+            <h2>
+                किशोर बाळासाहेब
+                <br>
+                माणकापुरे
+            </h2>
+
+            <h3>
+                महाराष्ट्र राज्य शासन पुरस्कारप्राप्त लेखक
+            </h3>
+
+            <p>
+                किशोर बाळासाहेब माणकापुरे हे लेखक,
+                चित्रकला शिक्षक आणि विविध सामाजिक
+                चळवळींमध्ये सक्रिय सहभाग घेणारे
+                समाजप्रबोधनशील व्यक्तिमत्त्व आहेत.
+            </p>
+
+            <p>
+                विद्यार्थ्यांमध्ये सकारात्मक विचार,
+                महापुरुषांचे विचार आणि जीवनमूल्ये
+                रुजविण्याबरोबरच आपल्या लेखनातून
+                समाजातील विविध प्रश्नांवर भाष्य
+                करण्याचे कार्य ते सातत्याने करत आहेत.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT DETAILS ================= -->
+
+<section class="details-section">
+
+    <div class="details-container">
+
+        <div class="section-heading">
+
+            <span>
+                माझा प्रवास
+            </span>
+
+            <h2>
+                लेखन आणि सामाजिक वाटचाल
+            </h2>
+
+            <p>
+                अनुभव, संघर्ष आणि समाजासाठी काहीतरी
+                सकारात्मक करण्याच्या ध्येयातून घडलेला प्रवास.
+            </p>
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    01
+                </div>
+
+                <h3>
+                    लेखनाची सुरुवात
+                </h3>
+
+                <p>
+                    2013 पासून विविध विषयांवर लेखन करण्यास
+                    सुरुवात केली. समाजातील प्रश्न, शिक्षण,
+                    विद्यार्थी आणि सकारात्मक विचार यांना
+                    लेखनातून मांडण्याचा प्रयत्न केला.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    02
+                </div>
+
+                <h3>
+                    पहिले पुस्तक
+                </h3>
+
+                <p>
+                    2019 साली पहिले पुस्तक प्रकाशित झाले.
+                    त्यानंतर पुस्तक लेखनाचा प्रवास अधिक
+                    व्यापक होत गेला.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    03
+                </div>
+
+                <h3>
+                    विद्यार्थीप्रिय शिक्षक
+                </h3>
+
+                <p>
+                    चित्रकला शिक्षक म्हणून विद्यार्थ्यांशी
+                    जिव्हाळ्याचे नाते निर्माण करत शिक्षणाबरोबरच
+                    जीवनमूल्यांची आणि सकारात्मक विचारांची
+                    प्रेरणा देण्याचे कार्य.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    04
+                </div>
+
+                <h3>
+                    सामाजिक सहभाग
+                </h3>
+
+                <p>
+                    विविध सामाजिक चळवळींमध्ये सक्रिय सहभाग.
+                    समाजजागृती आणि परिवर्तनासाठी साहित्य,
+                    शिक्षण आणि विचारांचा उपयोग करण्याचा प्रयत्न.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WRITING PURPOSE ================= -->
+
+<section class="purpose-section">
+
+    <div class="purpose-container">
+
+        <div class="purpose-symbol">
+            “
+        </div>
+
+        <div class="purpose-content">
+
+            <div class="section-label">
+                लेखनास सुरुवात करण्यामागचा हेतू
+            </div>
+
+            <h2>
+                साहित्याच्या माध्यमातून
+                समाजपरिवर्तन
+            </h2>
+
+            <p>
+                “समाजातील वेगवेगळ्या क्षेत्रात बदल करायचा असेल
+                तर साहित्य निर्माण करणे आवश्यक आहे.”
+            </p>
+
+            <span>
+                — किशोर बाळासाहेब माणकापुरे
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="achievement-section">
+
+    <div class="achievement-container">
+
+        <div class="section-heading">
+
+            <span>
+                गौरव आणि योगदान
+            </span>
+
+            <h2>
+                पुरस्कार व विविध क्षेत्रातील कार्य
+            </h2>
+
+        </div>
+
+
+        <div class="achievement-list">
+
+
+            <div class="achievement-item">
+
+                <div class="achievement-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        यदुनात थत्ते पुरस्कार
+                    </h3>
+
+                    <p>
+                        ‘विद्यार्थी दशेत महापुरुष अभ्यासताना!’
+                        या पुस्तकास महाराष्ट्र राज्य शासनाच्या
+                        साहित्य आणि संस्कृती विभागाकडून
+                        यदुनात थत्ते पुरस्काराने सन्मानित.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-item">
+
+                <div class="achievement-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        विविध सामाजिक संस्थांचे पुरस्कार
+                    </h3>
+
+                    <p>
+                        सामाजिक आणि शैक्षणिक क्षेत्रातील
+                        योगदानाबद्दल अनेक नामांकित
+                        सामाजिक संस्थांकडून पुरस्कार.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-item">
+
+                <div class="achievement-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        लेखन आणि प्रसिद्धी
+                    </h3>
+
+                    <p>
+                        विविध विषयांवरील लेख समाजमाध्यमे,
+                        वृत्तपत्रे आणि दिवाळी अंकांमधून
+                        प्रसिद्ध झाले आहेत.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-item">
+
+                <div class="achievement-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        परीक्षक म्हणून योगदान
+                    </h3>
+
+                    <p>
+                        विविध स्पर्धांचे परीक्षक म्हणून
+                        काम केले असून पोलीस स्टेशनमार्फत
+                        घेण्यात येणाऱ्या ‘गणराया अवार्ड 2025’
+                        चे परीक्षक म्हणूनही योगदान दिले.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="about-footer">
+
+    <p>
+        © 2026 किशोर बाळासाहेब माणकापुरे
+        | सर्व हक्क राखीव
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

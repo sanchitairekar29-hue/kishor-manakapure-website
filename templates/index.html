@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>किशोर बाळासाहेब माणकापुरे | अधिकृत लेखक वेबसाईट</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="/" class="brand">
+                <div class="brand-name">किशोर माणकापुरे</div>
+                <div class="brand-subtitle">अधिकृत लेखक वेबसाईट</div>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="/" class="active">मुख्यपृष्ठ</a>
+
+                <a href="/author">लेखक परिचय</a>
+
+                <a href="/books">पुस्तके</a>
+
+                <a href="/awards">पुरस्कार</a>
+
+                <a href="/gallery">गॅलरी</a>
+
+                <a href="/contact">संपर्क</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="hero-content">
+
+                    <div class="official-title">
+                        Official Author Website
+                    </div>
+
+                    <h1>
+                        किशोर बाळासाहेब
+                        <br>
+                        माणकापुरे
+                    </h1>
+
+                    <h2>
+                        महाराष्ट्र राज्य शासन पुरस्कारप्राप्त लेखक
+                    </h2>
+
+                    <p>
+                        प्रेरणादायी लेखक, उत्कृष्ट शिक्षक आणि समाजप्रबोधन
+                        करणारे विचारवंत.
+                    </p>
+
+
+                    <a href="/author" class="author-btn">
+                        लेखक परिचय वाचा
+                        <span>→</span>
+                    </a>
+
+
+                    <!-- SOCIAL MEDIA -->
+
+                    <div class="social-area">
+
+                        <div class="social-title">
+                            Follow On Social Media
+                        </div>
+
+                        <div class="social-icons">
+
+                            <a href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" aria-label="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT PHOTO -->
+
+                <div class="hero-photo-area">
+
+                    <div class="hero-photo-frame">
+
+                        <img
+                            src="{{ url_for('static', filename='images/author.jpg') }}"
+                            alt="किशोर बाळासाहेब माणकापुरे">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 किशोर बाळासाहेब माणकापुरे.
+                सर्व हक्क राखीव.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
