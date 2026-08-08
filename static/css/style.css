@@ -59,19 +59,14 @@ body {
 .navbar {
     width: 100%;
     height: 108px;
-
     background: #020b14;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
     position: relative;
     z-index: 100;
 }
 
-
 .nav-container {
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,19 +84,15 @@ body {
 
 .brand-name {
     color: var(--gold);
-
     font-size: 32px;
     font-weight: 800;
-
     line-height: 1.2;
 }
 
 .brand-subtitle {
     color: #eeeeee;
-
     font-size: 18px;
     font-weight: 400;
-
     margin-top: 2px;
 }
 
@@ -118,16 +109,11 @@ body {
 
 .nav-links a {
     position: relative;
-
     color: #eeeeee;
-
     text-decoration: none;
-
     font-size: 21px;
     font-weight: 400;
-
     padding: 12px 0;
-
     transition: 0.25s ease;
 }
 
@@ -141,17 +127,12 @@ body {
 
 .nav-links a.active::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
-
     height: 3px;
-
     background: var(--gold);
-
     border-radius: 10px;
 }
 
@@ -207,7 +188,6 @@ body {
 
 .hero-content {
     padding-left: 25px;
-
     max-width: 720px;
 }
 
@@ -218,13 +198,9 @@ body {
 
 .official-title {
     color: var(--gold);
-
     font-family: Georgia, serif;
-
     font-size: 25px;
-
     font-style: italic;
-
     margin-bottom: 15px;
 }
 
@@ -235,15 +211,10 @@ body {
 
 .hero-content h1 {
     color: var(--white);
-
     font-size: clamp(55px, 5vw, 82px);
-
     font-weight: 800;
-
     line-height: 1.12;
-
     letter-spacing: -2px;
-
     margin-bottom: 25px;
 }
 
@@ -254,13 +225,9 @@ body {
 
 .hero-content h2 {
     color: var(--gold);
-
     font-size: 29px;
-
     font-weight: 700;
-
     line-height: 1.45;
-
     margin-bottom: 20px;
 }
 
@@ -271,13 +238,9 @@ body {
 
 .hero-content p {
     color: #eeeeee;
-
     font-size: 24px;
-
     line-height: 1.8;
-
     max-width: 680px;
-
     margin-bottom: 35px;
 }
 
@@ -288,19 +251,15 @@ body {
 
 .author-btn {
     display: inline-flex;
-
     align-items: center;
-
     gap: 15px;
 
     background: var(--gold);
-
     color: #111;
 
     text-decoration: none;
 
     font-size: 21px;
-
     font-weight: 700;
 
     padding: 16px 28px;
@@ -314,17 +273,13 @@ body {
 
 .author-btn span {
     font-size: 28px;
-
     line-height: 1;
-
     transition: transform 0.25s ease;
 }
 
 .author-btn:hover {
     background: var(--gold-light);
-
     transform: translateY(-2px);
-
     color: #111;
 }
 
@@ -343,35 +298,26 @@ body {
 
 .social-title {
     color: #eeeeee;
-
     font-family: Georgia, serif;
-
     font-size: 20px;
-
     margin-bottom: 17px;
 }
 
 .social-icons {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
 .social-icons a {
     color: var(--gold);
-
     font-size: 30px;
-
     text-decoration: none;
-
     transition: 0.25s ease;
 }
 
 .social-icons a:hover {
     color: var(--gold-light);
-
     transform: translateY(-3px);
 }
 
@@ -382,9 +328,7 @@ body {
 
 .hero-photo-area {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 }
 
@@ -395,13 +339,10 @@ body {
 
 .hero-photo-frame {
     width: 100%;
-
     max-width: 650px;
-
     height: 760px;
 
     border: 2px solid var(--gold);
-
     border-radius: 24px;
 
     overflow: hidden;
@@ -421,13 +362,9 @@ body {
 
 .hero-photo-frame img {
     width: 100%;
-
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
     object-position: center center;
 }
 
@@ -500,22 +437,18 @@ footer {
 
     .navbar {
         height: auto;
-
         padding-top: 18px;
         padding-bottom: 18px;
     }
 
     .nav-container {
         flex-direction: column;
-
         gap: 18px;
     }
 
     .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 10px 25px;
     }
 
@@ -525,20 +458,15 @@ footer {
 
     .hero-container {
         min-height: auto;
-
         grid-template-columns: 1fr;
-
         text-align: center;
-
         padding-top: 60px;
         padding-bottom: 70px;
     }
 
     .hero-content {
         padding-left: 0;
-
         max-width: 850px;
-
         margin: auto;
     }
 
@@ -553,7 +481,6 @@ footer {
 
     .hero-photo-frame {
         width: min(90vw, 600px);
-
         height: 700px;
     }
 
@@ -604,7 +531,6 @@ footer {
 
     .hero-content h1 {
         font-size: 43px;
-
         letter-spacing: -1px;
     }
 
@@ -614,13 +540,11 @@ footer {
 
     .hero-content p {
         font-size: 18px;
-
         line-height: 1.7;
     }
 
     .author-btn {
         font-size: 18px;
-
         padding: 14px 23px;
     }
 
@@ -634,9 +558,7 @@ footer {
 
     .hero-photo-frame {
         width: 100%;
-
         height: 520px;
-
         border-radius: 18px;
     }
 }
@@ -661,7 +583,10 @@ footer {
     }
 }
 
-/* ================= GALLERY ================= */
+
+/* =====================================================
+   GALLERY
+===================================================== */
 
 .gallery-section {
     padding: 60px 5%;
@@ -669,65 +594,176 @@ footer {
 }
 
 .gallery-container {
-    max-width: 1450px;
-    margin: auto;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
+
+/* =====================================================
+   GALLERY CARD
+===================================================== */
+
 .gallery-card {
-    background: white;
-    padding: 10px;
+    width: 100%;
+    background: #ffffff;
     border-radius: 12px;
+    overflow: hidden;
 
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
 
-    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =====================================================
+   GALLERY IMAGE
+===================================================== */
 
 .gallery-card img {
     width: 100%;
-    height: 350px;
+    height: 190px;
 
     object-fit: cover;
 
-    display: block;
+    /* चेहरा वरच्या बाजूला राहील */
+    object-position: center top;
 
-    border-radius: 8px;
+    display: block;
 
     transition: transform 0.4s ease;
 }
 
 .gallery-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
-/* MOBILE */
+/* =====================================================
+   GALLERY CAPTION
+===================================================== */
+
+.gallery-caption {
+    display: block !important;
+
+    width: 100%;
+
+    padding: 16px 17px 18px;
+
+    background: #ffffff;
+
+    color: #020b14;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.gallery-caption h3 {
+    display: block !important;
+
+    margin: 0 0 8px 0;
+
+    color: #020b14;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.gallery-caption p {
+    display: block !important;
+
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    white-space: normal;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
+    .gallery-section {
+        padding: 50px 4%;
     }
 
-}
-
-@media (max-width: 600px) {
-
     .gallery-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .gallery-card img {
-        height: auto;
+        height: 180px;
+        object-position: center top;
     }
-
 }
 
-/* ================= CONTACT ================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 40px 20px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 190px;
+
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .gallery-caption {
+        padding: 15px 15px 17px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+
+    .gallery-caption p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact-section {
     padding: 70px 5%;
@@ -739,13 +775,16 @@ footer {
     margin: auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1.2fr;
 
     gap: 40px;
 }
 
 
-/* CONTACT INFO */
+/* =====================================================
+   CONTACT INFO + FORM
+===================================================== */
 
 .contact-info,
 .contact-form {
@@ -761,18 +800,24 @@ footer {
 .contact-info h2,
 .contact-form h2 {
     font-size: 30px;
+
     margin-bottom: 20px;
+
     color: #020b14;
 }
 
 .contact-info > p {
     color: #555;
+
     line-height: 1.8;
+
     margin-bottom: 30px;
 }
 
 
-/* CONTACT ITEMS */
+/* =====================================================
+   CONTACT ITEMS
+===================================================== */
 
 .contact-item {
     display: flex;
@@ -811,7 +856,9 @@ footer {
 }
 
 
-/* FORM */
+/* =====================================================
+   CONTACT FORM
+===================================================== */
 
 .form-group {
     margin-bottom: 20px;
@@ -858,7 +905,9 @@ footer {
 }
 
 
-/* SEND BUTTON */
+/* =====================================================
+   SEND BUTTON
+===================================================== */
 
 .contact-form button {
     width: 100%;
@@ -891,7 +940,9 @@ footer {
 }
 
 
-/* MOBILE */
+/* =====================================================
+   CONTACT MOBILE
+===================================================== */
 
 @media (max-width: 800px) {
 
@@ -903,5 +954,4 @@ footer {
     .contact-form {
         padding: 25px;
     }
-
 }

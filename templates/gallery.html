@@ -18,6 +18,37 @@
         href="{{ url_for('static', filename='css/style.css') }}"
     >
 
+    <style>
+    .gallery-card {
+        overflow: hidden;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-caption {
+        display: block;
+        padding: 18px;
+        background: #ffffff;
+    }
+
+    .gallery-caption h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .gallery-caption p {
+        margin: 0;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -50,65 +81,150 @@
 </nav>
 
 
-<!-- GALLERY HERO -->
-
-<section class="books-hero">
-
-    <div class="hero-overlay">
-
-        <h1>फोटो गॅलरी</h1>
-
-        <div class="gold-line"></div>
-
-        <p>
-            लेखन, पुरस्कार, सामाजिक कार्य आणि
-            विविध कार्यक्रमांच्या काही आठवणी.
-        </p>
-
-    </div>
-
-</section>
-
-
 <!-- GALLERY -->
 
 <section class="gallery-section">
 
     <div class="gallery-container">
 
+        <!-- Photo 1 -->
         <div class="gallery-card">
             <img
-                src="{{ url_for('static', filename='images/author.jpg') }}"
-                alt="किशोर माणकापुरे"
+                src="{{ url_for('static', filename='images/gallery1.jpg') }}"
+                alt="‘पालकत्व एक आव्हान’ पुस्तक प्रकाशन सोहळा"
             >
+            <div class="gallery-caption">
+                <h3>‘पालकत्व एक आव्हान’ पुस्तक प्रकाशन</h3>
+                <p>
+                    प्राचार्य डॉ. अर्जुन कुंभार यांच्या समवेत
+                    ‘पालकत्व एक आव्हान’ या पुस्तकाच्या प्रकाशन सोहळ्यादरम्यान.
+                </p>
+            </div>
         </div>
 
+
+        <!-- Photo 2 -->
         <div class="gallery-card">
             <img
-                src="{{ url_for('static', filename='images/book1.jpg') }}"
-                alt="पुस्तक"
+                src="{{ url_for('static', filename='images/gallery2.jpg') }}"
+                alt="प्रा. चंद्रकुमार नलगे यांच्या हस्ते सन्मान"
             >
+            <div class="gallery-caption">
+                <h3>सन्मान सोहळा</h3>
+                <p>
+                    महाराष्ट्रातील ज्येष्ठ साहित्यिक
+                    प्रा. चंद्रकुमार नलगे सर यांच्या हस्ते सन्मान.
+                </p>
+            </div>
         </div>
 
+
+        <!-- Photo 3 -->
         <div class="gallery-card">
             <img
-                src="{{ url_for('static', filename='images/book2.jpg') }}"
-                alt="पुस्तक"
+                src="{{ url_for('static', filename='images/gallery3.jpg') }}"
+                alt="आप्पासाहेब खोत यांच्यासोबत"
             >
+            <div class="gallery-caption">
+                <h3>ग्रामीण कथाकारांसोबत</h3>
+                <p>
+                    ग्रामीण कथाकार, लेखक मा. आप्पासाहेब खोत यांच्यासोबत.
+                </p>
+            </div>
         </div>
 
+
+        <!-- Photo 4 -->
         <div class="gallery-card">
             <img
-                src="{{ url_for('static', filename='images/book3.jpg') }}"
-                alt="धडपड"
+                src="{{ url_for('static', filename='images/gallery4.jpg') }}"
+                alt="उत्तम कांबळे यांच्यासोबत"
             >
+            <div class="gallery-caption">
+                <h3>ज्येष्ठ साहित्यिकांसोबत</h3>
+                <p>
+                    ज्येष्ठ साहित्यिक, विचारवंत मा. उत्तम कांबळे यांच्या समवेत.
+                </p>
+            </div>
         </div>
 
+
+        <!-- Photo 5 -->
         <div class="gallery-card">
             <img
-                src="{{ url_for('static', filename='images/book4.jpg') }}"
-                alt="पुस्तक"
+                src="{{ url_for('static', filename='images/gallery5.jpg') }}"
+                alt="डॉ. सुरज येंगडे यांच्यासोबत"
             >
+            <div class="gallery-caption">
+                <h3>डॉ. सुरज येंगडे यांच्यासोबत</h3>
+                <p>
+                    युवा विचारवंत व ‘Caste Matters’ या पुस्तकाचे
+                    लेखक डॉ. सुरज येंगडे यांच्या सोबत.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Photo 6 -->
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/gallery6.jpg') }}"
+                alt="प्रा. डॉ. सुनीलकुमार लवटे यांच्यासोबत"
+            >
+            <div class="gallery-caption">
+                <h3>ज्येष्ठ विचारवंतांसोबत</h3>
+                <p>
+                    ज्येष्ठ विचारवंत प्रा. डॉ. सुनीलकुमार लवटे सरांच्या सोबत.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Photo 7 -->
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/gallery7.jpg') }}"
+                alt="न्यायमूर्ती टी. व्ही. नलवडे यांना पुस्तक भेट"
+            >
+            <div class="gallery-caption">
+                <h3>पुस्तक भेट</h3>
+                <p>
+                    मुंबई हायकोर्टचे निवृत्त न्यायाधीश
+                    न्यायमूर्ती टी. व्ही. नलवडे सर यांना पुस्तक भेट देताना.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Photo 8 -->
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/gallery8.jpg') }}"
+                alt="धडपड पुस्तक प्रकाशन सोहळा"
+            >
+            <div class="gallery-caption">
+                <h3>‘धडपड’ पुस्तक प्रकाशन सोहळा</h3>
+                <p>
+                    प्रमुख उपस्थिती न्यायमूर्ती टी. व्ही. नलवडे सर,
+                    प्राचार्य जे. के. पवार व इतर मान्यवर.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Photo 9 -->
+        <div class="gallery-card">
+            <img
+                src="{{ url_for('static', filename='images/gallery9.jpg') }}"
+                alt="राज्य वाङ्मय पुरस्कार"
+            >
+            <div class="gallery-caption">
+                <h3>राज्य वाङ्मय पुरस्कार</h3>
+                <p>
+                    ‘विद्यार्थी दशेत महापुरुष अभ्यासताना’ या पुस्तकास
+                    सन २०२० च्या राज्य वाङ्मय पुरस्कारासाठी निवड.
+                </p>
+            </div>
         </div>
 
     </div>
