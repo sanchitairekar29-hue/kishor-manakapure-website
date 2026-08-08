@@ -1,218 +1,1174 @@
 {% extends "base.html" %}
 
-{% block title %}साहित्यिक वाटचाल | किशोर माणकापूरे{% endblock %}
+{% block title %}साहित्यिक वाटचाल | किशोर बाळासाहेब माणकापुरे{% endblock %}
 
 {% block content %}
 
 <style>
-    .sahityik-page {
-        padding: 50px 20px 70px;
-        background: #fffaf4;
-    }
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.sahityik-page {
+    background: #fffaf4;
+    color: #30251f;
+    padding-bottom: 80px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.sahityik-hero {
+    position: relative;
+    overflow: hidden;
+
+    max-width: 1200px;
+    margin: 0 auto 55px;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 210, 120, .18),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #45170e,
+            #7d2d16 55%,
+            #a64c24
+        );
+
+    color: white;
+
+    border-radius: 0 0 30px 30px;
+
+    box-shadow:
+        0 15px 45px rgba(70, 30, 10, .18);
+}
+
+.sahityik-hero::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 25px;
+    left: 35px;
+
+    color: #f5c76b;
+
+    font-size: 45px;
+
+    opacity: .5;
+}
+
+.sahityik-hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 35px;
+
+    color: #f5c76b;
+
+    font-size: 45px;
+
+    opacity: .5;
+}
+
+.sahityik-small-title {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #ffd477;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.sahityik-hero h1 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: clamp(34px, 5vw, 58px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.sahityik-hero p {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #fff7ec;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.sahityik-intro {
+    max-width: 1050px;
+
+    margin: 0 auto 65px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 1px solid #eee0d0;
+
+    box-shadow:
+        0 10px 35px rgba(70, 40, 20, .08);
+}
+
+.sahityik-intro h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    color: #8d361b;
+
+    font-size: 30px;
+}
+
+.sahityik-intro p {
+    margin-bottom: 15px;
+
+    color: #55483f;
+
+    font-size: 17px;
+
+    line-height: 1.95;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.sahityik-section-title {
+    max-width: 1100px;
+
+    margin: 0 auto 35px;
+
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+.sahityik-section-title span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c58a32;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.sahityik-section-title h2 {
+    margin: 0;
+
+    color: #8d361b;
+
+    font-size: 34px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.sahityik-timeline {
+    position: relative;
+
+    max-width: 1050px;
+
+    margin: 0 auto 75px;
+
+    padding: 10px 0;
+}
+
+.sahityik-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: linear-gradient(
+        to bottom,
+        #c58a32,
+        #8d361b,
+        #c58a32
+    );
+
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+
+    width: 50%;
+
+    padding: 0 45px 45px;
+
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    top: 3px;
+
+    width: 18px;
+    height: 18px;
+
+    background: #c58a32;
+
+    border: 4px solid #fffaf4;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 2px #c58a32;
+
+    z-index: 2;
+
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -9px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -9px;
+}
+
+.timeline-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #eee0d0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(70, 40, 20, .08);
+
+    transition: .3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 35px rgba(70, 40, 20, .13);
+}
+
+.timeline-card .year {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    padding: 5px 12px;
+
+    background: #fff3df;
+
+    color: #8d361b;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.timeline-card h3 {
+    margin: 0 0 9px;
+
+    color: #8d361b;
+
+    font-size: 21px;
+}
+
+.timeline-card p {
+    margin: 0;
+
+    color: #5e5046;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   PHOTO GALLERY
+===================================================== */
+
+.sahityik-gallery {
+    max-width: 1150px;
+
+    margin: 0 auto 65px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+.sahityik-card {
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #eadbc9;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(70, 40, 20, .10);
+
+    transition: .3s ease;
+}
+
+.sahityik-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 38px rgba(70, 40, 20, .15);
+}
+
+.sahityik-card img {
+    width: 100%;
+
+    height: 330px;
+
+    display: block;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: transform .4s ease;
+}
+
+.sahityik-card:hover img {
+    transform: scale(1.03);
+}
+
+.sahityik-content {
+    padding: 22px;
+}
+
+.sahityik-content h3 {
+    margin: 0 0 10px;
+
+    color: #8d361b;
+
+    font-size: 21px;
+}
+
+.sahityik-content p {
+    margin: 0;
+
+    color: #5e5046;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+
+.sahityik-highlight {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1d8,
+            #fff9ef
+        );
+
+    border-left: 6px solid #c58a32;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(70, 40, 20, .07);
+}
+
+.sahityik-highlight h2 {
+    margin: 0 0 15px;
+
+    color: #8d361b;
+
+    font-size: 28px;
+}
+
+.sahityik-highlight p {
+    margin: 0;
+
+    color: #514238;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.sahityik-lightbox {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    background: rgba(0, 0, 0, .94);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.sahityik-lightbox img {
+    max-width: 94%;
+
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 50px rgba(0, 0, 0, .5);
+}
+
+.sahityik-close {
+    position: absolute;
+
+    top: 15px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
 
     .sahityik-hero {
-        max-width: 1100px;
-        margin: 0 auto 45px;
-        padding: 55px 30px;
-        text-align: center;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #6d2415, #a94d25);
-        color: white;
-        box-shadow: 0 12px 35px rgba(0,0,0,.12);
-    }
+        margin-left: 15px;
 
-    .sahityik-hero h1 {
-        margin: 0 0 15px;
-        font-size: 42px;
-    }
+        margin-right: 15px;
 
-    .sahityik-hero p {
-        max-width: 800px;
-        margin: auto;
-        font-size: 18px;
-        line-height: 1.8;
+        padding: 65px 25px;
     }
 
     .sahityik-intro {
-        max-width: 1000px;
-        margin: 0 auto 45px;
-        padding: 30px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(80,45,20,.08);
+        margin-left: 20px;
+
+        margin-right: 20px;
     }
 
-    .sahityik-intro h2 {
-        color: #8d361b;
-        margin-top: 0;
-    }
+    .sahityik-timeline {
+        margin-left: 20px;
 
-    .sahityik-intro p {
-        color: #514238;
-        font-size: 17px;
-        line-height: 1.9;
-    }
-
-    .sahityik-title {
-        max-width: 1100px;
-        margin: 0 auto 25px;
-        text-align: center;
-        color: #8d361b;
-        font-size: 30px;
+        margin-right: 20px;
     }
 
     .sahityik-gallery {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
-    }
+        margin-left: 20px;
 
-    .sahityik-card {
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid #eee0d0;
-        box-shadow: 0 8px 25px rgba(70,40,20,.10);
-        transition: .3s;
-    }
-
-    .sahityik-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .sahityik-card img {
-        width: 100%;
-        height: 330px;
-        object-fit: cover;
-        display: block;
-        cursor: pointer;
-    }
-
-    .sahityik-content {
-        padding: 20px;
-    }
-
-    .sahityik-content h3 {
-        margin: 0 0 10px;
-        color: #8d361b;
-        font-size: 21px;
-    }
-
-    .sahityik-content p {
-        margin: 0;
-        color: #5e5046;
-        line-height: 1.8;
+        margin-right: 20px;
     }
 
     .sahityik-highlight {
-        max-width: 1000px;
-        margin: 50px auto 0;
-        padding: 30px;
-        background: #fff3df;
-        border-left: 5px solid #c58a32;
-        border-radius: 12px;
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sahityik-page {
+        padding-bottom: 55px;
+    }
+
+    .sahityik-hero {
+        padding: 55px 20px;
+
+        border-radius: 0 0 22px 22px;
+    }
+
+    .sahityik-hero h1 {
+        font-size: 34px;
+    }
+
+    .sahityik-hero p {
+        font-size: 16px;
+    }
+
+    .sahityik-intro {
+        padding: 25px;
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+        margin-bottom: 50px;
+    }
+
+    .sahityik-intro h2 {
+        font-size: 25px;
+    }
+
+    .sahityik-intro p {
+        font-size: 16px;
+    }
+
+
+    /* MOBILE TIMELINE */
+
+    .sahityik-section-title {
+        margin-bottom: 30px;
+    }
+
+    .sahityik-section-title h2 {
+        font-size: 27px;
+    }
+
+    .sahityik-timeline {
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+        padding-left: 28px;
+    }
+
+    .sahityik-timeline::before {
+        left: 8px;
+
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        left: 0;
+
+        width: 100%;
+
+        padding:
+            0 0 30px 28px;
+
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -28px;
+
+        right: auto;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .timeline-card h3 {
+        font-size: 19px;
+    }
+
+
+    /* MOBILE GALLERY */
+
+    .sahityik-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+
+    .sahityik-card img {
+        height: 280px;
+    }
+
+
+    /* MOBILE HIGHLIGHT */
+
+    .sahityik-highlight {
+        padding: 25px;
+
+        margin-left: 20px;
+
+        margin-right: 20px;
     }
 
     .sahityik-highlight h2 {
-        color: #8d361b;
-        margin-top: 0;
+        font-size: 24px;
     }
 
-    .sahityik-highlight p {
-        color: #514238;
-        line-height: 1.9;
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .sahityik-hero h1 {
+        font-size: 30px;
     }
 
-    .sahityik-lightbox {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        inset: 0;
-        background: rgba(0,0,0,.92);
-        align-items: center;
-        justify-content: center;
-        padding: 25px;
+    .sahityik-card img {
+        height: 240px;
     }
 
-    .sahityik-lightbox img {
-        max-width: 95%;
-        max-height: 90vh;
+}
+
+@media (max-width: 400px) {
+
+    .sahityik-hero h1 {
+        font-size: 30px;
+    }
+
+    .sahityik-card img {
+        height: 240px;
+    }
+
+}
+
+
+/* =====================================================
+   MAIN AUTHOR PHOTO
+===================================================== */
+
+.sahityik-main-photo {
+    max-width: 1150px;
+    margin: 0 auto 65px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sahityik-main-photo-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eadbc9;
+    border-radius: 24px;
+    box-shadow: 0 15px 45px rgba(70, 40, 20, .15);
+}
+
+/* =====================================================
+   STEP 5 - MAIN PHOTO PERFECT DISPLAY
+===================================================== */
+
+.sahityik-main-photo img {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 500px;
+
+    max-height: 750px;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center center;
+
+    background: #1f1713;
+
+    cursor: pointer;
+
+    transition: transform .5s ease;
+}
+
+.sahityik-main-photo-wrapper {
+    overflow: hidden;
+
+    background: #1f1713;
+
+    border-radius: 24px;
+
+    border: 1px solid #eadbc9;
+
+    box-shadow:
+        0 18px 50px rgba(70, 40, 20, .18);
+}
+
+.sahityik-main-photo-wrapper:hover img {
+    transform: scale(1.01);
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width: 901px) {
+
+    .sahityik-main-photo img {
+        max-height: 720px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sahityik-main-photo img {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        max-height: none;
+
         object-fit: contain;
-        border-radius: 10px;
     }
 
-    .sahityik-close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: white;
-        font-size: 42px;
-        cursor: pointer;
+    .sahityik-main-photo-wrapper {
+        border-radius: 18px;
     }
 
-    @media (max-width: 768px) {
-        .sahityik-gallery {
-            grid-template-columns: 1fr;
-        }
+}
+.sahityik-main-photo-wrapper:hover img {
+    transform: scale(1.02);
+}
 
-        .sahityik-hero h1 {
-            font-size: 30px;
-        }
+.sahityik-main-photo-caption {
+    padding: 25px 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff8ed, #ffffff);
+}
 
-        .sahityik-card img {
-            height: 280px;
-        }
+.sahityik-main-photo-caption h2 {
+    margin: 0 0 10px;
+    color: #8d361b;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.sahityik-main-photo-caption p {
+    margin: 0;
+    color: #5e5046;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .sahityik-main-photo {
+        margin-bottom: 50px;
+        padding: 0 20px;
     }
+
+    .sahityik-main-photo-wrapper {
+        border-radius: 18px;
+    }
+
+    .sahityik-main-photo img {
+        height: 390px;
+    }
+
+    .sahityik-main-photo-caption {
+        padding: 20px;
+    }
+
+    .sahityik-main-photo-caption h2 {
+        font-size: 23px;
+    }
+
+    .sahityik-main-photo-caption p {
+        font-size: 15px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .sahityik-main-photo img {
+        height: 300px;
+    }
+
+}
+
 </style>
 
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
 
 <div class="sahityik-page">
 
-    <!-- HERO -->
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
     <section class="sahityik-hero">
 
-        <h1>साहित्यिक वाटचाल</h1>
+        <div class="sahityik-small-title">
+            ✦ लेखकाचा साहित्यिक प्रवास ✦
+        </div>
+
+        <h1>
+            साहित्यिक वाटचाल
+        </h1>
 
         <p>
-            साहित्य, विचार आणि सामाजिक जाणीव यांच्या माध्यमातून
-            घडत गेलेला एक प्रेरणादायी प्रवास...
+            साहित्य, शिक्षण, विचार आणि सामाजिक जाणीव
+            यांच्या माध्यमातून घडत गेलेला
+            <strong>किशोर बाळासाहेब माणकापूरे</strong>
+            यांचा प्रेरणादायी प्रवास.
         </p>
 
     </section>
 
 
-    <!-- INTRODUCTION -->
+    <!-- =================================================
+         INTRODUCTION
+    ================================================== -->
+
     <section class="sahityik-intro">
 
-        <h2>वैचारिक आणि साहित्यिक प्रवास</h2>
+        <h2>
+            वैचारिक आणि साहित्यिक प्रवास
+        </h2>
 
         <p>
-            लेखन, वाचन, विचारमंथन आणि सामाजिक जाणीव यांच्या
-            माध्यमातून किशोर माणकापूरे यांची साहित्यिक वाटचाल
-            विकसित होत गेली.
+            लेखन, वाचन, विचारमंथन आणि सामाजिक जाणीव
+            यांच्या माध्यमातून किशोर बाळासाहेब माणकापूरे
+            यांची साहित्यिक वाटचाल विकसित होत गेली.
         </p>
 
         <p>
-            विविध साहित्यिक, वैचारिक आणि सामाजिक कार्यक्रमांमध्ये
-            सहभागी होत त्यांनी संविधान, समाज, शिक्षण, पालकत्व
-            आणि महापुरुषांच्या विचारांविषयी सातत्याने संवाद साधला.
+            शिक्षण, पालकत्व, संविधान, समाज आणि महापुरुषांच्या
+            विचारांवर सातत्याने चिंतन करत त्यांनी आपल्या
+            लेखनातून आणि संवादातून समाजाशी विचारांची नाळ
+            जोडली.
+        </p>
+
+        <p>
+            साहित्य हे केवळ शब्दांचे माध्यम नसून समाजाला
+            विचार करण्यास प्रवृत्त करणारे आणि सकारात्मक
+            परिवर्तनाची दिशा देणारे प्रभावी साधन आहे,
+            या विचारातून त्यांचा साहित्यिक प्रवास पुढे
+            जात आहे.
         </p>
 
     </section>
 
 
-    <!-- PHOTO SECTION -->
-    <h2 class="sahityik-title">
-        📸 साहित्यिक वाटचालीतील संस्मरणीय क्षण
-    </h2>
+    <!-- =================================================
+         JOURNEY TITLE
+    ================================================== -->
 
+    <div class="sahityik-section-title">
+
+        <span>JOURNEY</span>
+
+        <h2>
+            साहित्यिक प्रवासातील महत्त्वाचे टप्पे
+        </h2>
+
+    </div>
+
+
+    <!-- =================================================
+         JOURNEY TIMELINE
+    ================================================== -->
+
+    <section class="sahityik-timeline">
+
+
+        <!-- STEP 1 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <span class="year">
+                    प्रारंभ
+                </span>
+
+                <h3>
+                    वाचन आणि विचारांची सुरुवात
+                </h3>
+
+                <p>
+                    वाचनाची आवड, सामाजिक विषयांचे निरीक्षण
+                    आणि महापुरुषांच्या विचारांचा अभ्यास
+                    यामधून वैचारिक जडणघडणीला सुरुवात झाली.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <span class="year">
+                    लेखन
+                </span>
+
+                <h3>
+                    लेखनातून विचारांची मांडणी
+                </h3>
+
+                <p>
+                    शिक्षण, पालकत्व, समाज आणि व्यक्तिमत्त्व
+                    विकास यांसारख्या विषयांवर विचार मांडण्याची
+                    आणि लेखनाची वाटचाल पुढे सुरू झाली.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <span class="year">
+                    साहित्य
+                </span>
+
+                <h3>
+                    पुस्तक लेखनाचा प्रवास
+                </h3>
+
+                <p>
+                    अनुभव, विचार आणि सामाजिक जाणीवा यांना
+                    पुस्तकांच्या माध्यमातून वाचकांपर्यंत
+                    पोहोचवण्याचा प्रयत्न सुरू झाला.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <span class="year">
+                    समाजसंवाद
+                </span>
+
+                <h3>
+                    वैचारिक आणि सामाजिक उपक्रम
+                </h3>
+
+                <p>
+                    संविधान, शिक्षण आणि सामाजिक मूल्यांविषयी
+                    विविध कार्यक्रमांमधून संवाद साधण्याची
+                    संधी मिळाली.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 5 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <span class="year">
+                    आज
+                </span>
+
+                <h3>
+                    साहित्य आणि समाज यांचा संवाद
+                </h3>
+
+                <p>
+                    लेखन, शिक्षण आणि समाजप्रबोधनाच्या माध्यमातून
+                    सकारात्मक विचारांचा प्रसार करण्याचा प्रवास
+                    आजही सुरू आहे.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- =================================================
+     MAIN AUTHOR PHOTO
+================================================= -->
+
+<section class="sahityik-main-photo">
+
+    <div class="sahityik-main-photo-wrapper">
+
+        <img
+            src="{{ url_for('static', filename='images/sahityik-main.jpg') }}"
+            alt="किशोर बाळासाहेब माणकापूरे साहित्यिक कार्यक्रमात"
+            onclick="openSahityikImage(this.src)"
+        >
+
+        <div class="sahityik-main-photo-caption">
+
+            <h2>
+                साहित्यिक आणि वैचारिक वाटचाल
+            </h2>
+
+            <p>
+                विचार मांडताना आणि समाजाशी संवाद साधतानाचा
+                एक संस्मरणीय क्षण.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =================================================
+         PHOTO TITLE
+    ================================================== -->
+
+    <div class="sahityik-section-title">
+
+        <span>MEMORIES</span>
+
+        <h2>
+            साहित्यिक वाटचालीतील संस्मरणीय क्षण
+        </h2>
+
+    </div>
+
+
+    <!-- =================================================
+         PHOTO GALLERY
+    ================================================== -->
 
     <section class="sahityik-gallery">
 
 
         <!-- PHOTO 1 -->
+
         <article class="sahityik-card">
 
             <img
@@ -228,9 +1184,8 @@
                 </h3>
 
                 <p>
-                    महाराष्ट्र शासनाच्या सांस्कृतिक विभागाकडून
-                    आयोजित भारतीय संविधान अमृत महोत्सवी
-                    कार्यक्रमामध्ये विशेष आमंत्रण.
+                    भारतीय संविधानाच्या मूल्यांविषयी
+                    आयोजित कार्यक्रमातील संस्मरणीय क्षण.
                 </p>
 
             </div>
@@ -239,6 +1194,7 @@
 
 
         <!-- PHOTO 2 -->
+
         <article class="sahityik-card">
 
             <img
@@ -254,8 +1210,8 @@
                 </h3>
 
                 <p>
-                    प्रमुख पाहुणे म्हणून संविधानाविषयी
-                    जागृती करणारे विवेचन करताना.
+                    संविधान आणि लोकशाही मूल्यांविषयी
+                    विचार मांडतानाचा क्षण.
                 </p>
 
             </div>
@@ -264,11 +1220,12 @@
 
 
         <!-- PHOTO 3 -->
+
         <article class="sahityik-card">
 
             <img
                 src="{{ url_for('static', filename='images/mama-constitution-3.jpg') }}"
-                alt="संविधान जागृती कार्यक्रम"
+                alt="वैचारिक संवाद"
                 onclick="openSahityikImage(this.src)"
             >
 
@@ -279,8 +1236,8 @@
                 </h3>
 
                 <p>
-                    संविधानाची मूल्ये आणि लोकशाहीविषयी
-                    उपस्थितांशी संवाद साधताना.
+                    उपस्थितांशी विचारांची देवाणघेवाण
+                    करतानाचा संस्मरणीय प्रसंग.
                 </p>
 
             </div>
@@ -289,11 +1246,12 @@
 
 
         <!-- PHOTO 4 -->
+
         <article class="sahityik-card">
 
             <img
                 src="{{ url_for('static', filename='images/mama-constitution-4.jpg') }}"
-                alt="साहित्यिक आणि वैचारिक कार्यक्रम"
+                alt="साहित्यिक आणि वैचारिक व्यासपीठ"
                 onclick="openSahityikImage(this.src)"
             >
 
@@ -305,7 +1263,7 @@
 
                 <p>
                     साहित्यिक आणि वैचारिक कार्यप्रवासातील
-                    एक संस्मरणीय क्षण.
+                    एक सुंदर आठवण.
                 </p>
 
             </div>
@@ -314,6 +1272,7 @@
 
 
         <!-- PHOTO 5 -->
+
         <article class="sahityik-card">
 
             <img
@@ -330,7 +1289,7 @@
 
                 <p>
                     विविध कार्यक्रमांमध्ये मान्यवरांसोबत
-                    घडलेला संस्मरणीय प्रसंग.
+                    घडलेला संस्मरणीय क्षण.
                 </p>
 
             </div>
@@ -339,6 +1298,7 @@
 
 
         <!-- PHOTO 6 -->
+
         <article class="sahityik-card">
 
             <img
@@ -355,7 +1315,7 @@
 
                 <p>
                     समाजातील विविध विषयांवर विचार मांडताना
-                    आणि जनजागृती करताना.
+                    आणि जनजागृती करतानाचा क्षण.
                 </p>
 
             </div>
@@ -364,11 +1324,12 @@
 
 
         <!-- PHOTO 7 -->
+
         <article class="sahityik-card">
 
             <img
                 src="{{ url_for('static', filename='images/mama-constitution-7.jpg') }}"
-                alt="साहित्यिक वाटचालीतील क्षण"
+                alt="साहित्यिक वाटचालीतील अविस्मरणीय क्षण"
                 onclick="openSahityikImage(this.src)"
             >
 
@@ -379,8 +1340,8 @@
                 </h3>
 
                 <p>
-                    साहित्यिक वाटचालीतील जतन करून ठेवावा असा
-                    एक सुंदर क्षण.
+                    साहित्यिक आणि सामाजिक प्रवासातील
+                    जतन करून ठेवावा असा सुंदर क्षण.
                 </p>
 
             </div>
@@ -391,7 +1352,10 @@
     </section>
 
 
-    <!-- HIGHLIGHT -->
+    <!-- =================================================
+         FINAL HIGHLIGHT
+    ================================================== -->
+
     <section class="sahityik-highlight">
 
         <h2>
@@ -400,41 +1364,61 @@
 
         <p>
             साहित्य हे केवळ लेखन नसून समाजाशी संवाद साधण्याचे
-            प्रभावी माध्यम आहे. शिक्षण, संविधान, सामाजिक जाणीव
-            आणि मानवी मूल्ये यांविषयी विचार मांडत ही साहित्यिक
-            वाटचाल पुढे सुरू आहे.
+            प्रभावी माध्यम आहे. शिक्षण, संविधान, सामाजिक जाणीव,
+            मानवी मूल्ये आणि सकारात्मक विचार यांना केंद्रस्थानी
+            ठेवून ही साहित्यिक वाटचाल पुढे सुरू आहे.
         </p>
 
     </section>
 
+
 </div>
 
 
-<!-- LIGHTBOX -->
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
 <div
     id="sahityikLightbox"
     class="sahityik-lightbox"
     onclick="closeSahityikImage()"
 >
 
-    <span class="sahityik-close">&times;</span>
+    <span
+        class="sahityik-close"
+        onclick="event.stopPropagation(); closeSahityikImage();"
+    >
+        &times;
+    </span>
 
     <img
         id="sahityikLightboxImage"
         src=""
-        alt="मोठा फोटो"
+        alt="साहित्यिक वाटचालीतील मोठा फोटो"
+        onclick="event.stopPropagation();"
     >
 
 </div>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
 function openSahityikImage(imageSrc) {
 
-    document.getElementById("sahityikLightbox").style.display = "flex";
+    const lightbox =
+        document.getElementById("sahityikLightbox");
 
-    document.getElementById("sahityikLightboxImage").src = imageSrc;
+    const lightboxImage =
+        document.getElementById("sahityikLightboxImage");
+
+    lightboxImage.src = imageSrc;
+
+    lightbox.style.display = "flex";
 
     document.body.style.overflow = "hidden";
 }
@@ -442,22 +1426,32 @@ function openSahityikImage(imageSrc) {
 
 function closeSahityikImage() {
 
-    document.getElementById("sahityikLightbox").style.display = "none";
+    const lightbox =
+        document.getElementById("sahityikLightbox");
 
-    document.getElementById("sahityikLightboxImage").src = "";
+    const lightboxImage =
+        document.getElementById("sahityikLightboxImage");
 
-    document.body.style.overflow = "auto";
+    lightbox.style.display = "none";
+
+    lightboxImage.src = "";
+
+    document.body.style.overflow = "";
 }
 
 
 document.addEventListener("keydown", function(event) {
 
     if (event.key === "Escape") {
+
         closeSahityikImage();
+
     }
 
 });
 
+
 </script>
+
 
 {% endblock %}
