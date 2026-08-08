@@ -28,58 +28,83 @@
 
 <!-- ================= NAVBAR ================= -->
 
+<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
-<div class="container">
+    <div class="container">
 
-<a class="navbar-brand fw-bold text-warning fs-3" href="/">
+        <a class="navbar-brand fw-bold text-warning fs-3" href="/">
+            किशोर माणकापुरे
+        </a>
 
-किशोर माणकापुरे
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-</a>
+            <span class="navbar-toggler-icon"></span>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-data-bs-target="#navbarNav">
+        </button>
 
-<span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-</button>
+            <ul class="navbar-nav ms-auto">
 
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        मुख्यपृष्ठ
+                    </a>
+                </li>
 
-<ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/author">
+                        लेखक परिचय
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/">मुख्यपृष्ठ</a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/books">
+                        पुस्तके
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/about">लेखक परिचय</a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/awards">
+                        पुरस्कार
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/books">पुस्तके</a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">
+                        गॅलरी
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/awards">पुरस्कार</a>
-</li>
+                <!-- साहित्यिक वाटचाल -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/sahityik-vatchal">
+                        साहित्यिक वाटचाल
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/gallery">गॅलरी</a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">
+                        संपर्क
+                    </a>
+                </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/contact">संपर्क</a>
-</li>
+            </ul>
 
-</ul>
+        </div>
 
-</div>
-
-</div>
+    </div>
 
 </nav>
+
 
 <!-- ================= PAGE CONTENT ================= -->
 
@@ -90,12 +115,17 @@ data-bs-target="#navbarNav">
 {% endblock %}
 
 </main>
+
+
 <!-- ================= FOOTER ================= -->
 
 <footer class="bg-dark text-white py-4 mt-5">
+
     <div class="container text-center">
 
-        <h4 class="text-warning">किशोर बाळासाहेब माणकापुरे</h4>
+        <h4 class="text-warning">
+            किशोर बाळासाहेब माणकापुरे
+        </h4>
 
         <p>
             लेखक | चित्रकला शिक्षक | प्रेरणादायी विचारवंत
@@ -106,11 +136,14 @@ data-bs-target="#navbarNav">
         </p>
 
     </div>
+
 </footer>
+
 
 <!-- Bootstrap JS -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

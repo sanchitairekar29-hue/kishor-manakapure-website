@@ -1,0 +1,463 @@
+{% extends "base.html" %}
+
+{% block title %}साहित्यिक वाटचाल | किशोर माणकापूरे{% endblock %}
+
+{% block content %}
+
+<style>
+    .sahityik-page {
+        padding: 50px 20px 70px;
+        background: #fffaf4;
+    }
+
+    .sahityik-hero {
+        max-width: 1100px;
+        margin: 0 auto 45px;
+        padding: 55px 30px;
+        text-align: center;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #6d2415, #a94d25);
+        color: white;
+        box-shadow: 0 12px 35px rgba(0,0,0,.12);
+    }
+
+    .sahityik-hero h1 {
+        margin: 0 0 15px;
+        font-size: 42px;
+    }
+
+    .sahityik-hero p {
+        max-width: 800px;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .sahityik-intro {
+        max-width: 1000px;
+        margin: 0 auto 45px;
+        padding: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(80,45,20,.08);
+    }
+
+    .sahityik-intro h2 {
+        color: #8d361b;
+        margin-top: 0;
+    }
+
+    .sahityik-intro p {
+        color: #514238;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .sahityik-title {
+        max-width: 1100px;
+        margin: 0 auto 25px;
+        text-align: center;
+        color: #8d361b;
+        font-size: 30px;
+    }
+
+    .sahityik-gallery {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+
+    .sahityik-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #eee0d0;
+        box-shadow: 0 8px 25px rgba(70,40,20,.10);
+        transition: .3s;
+    }
+
+    .sahityik-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .sahityik-card img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
+    }
+
+    .sahityik-content {
+        padding: 20px;
+    }
+
+    .sahityik-content h3 {
+        margin: 0 0 10px;
+        color: #8d361b;
+        font-size: 21px;
+    }
+
+    .sahityik-content p {
+        margin: 0;
+        color: #5e5046;
+        line-height: 1.8;
+    }
+
+    .sahityik-highlight {
+        max-width: 1000px;
+        margin: 50px auto 0;
+        padding: 30px;
+        background: #fff3df;
+        border-left: 5px solid #c58a32;
+        border-radius: 12px;
+    }
+
+    .sahityik-highlight h2 {
+        color: #8d361b;
+        margin-top: 0;
+    }
+
+    .sahityik-highlight p {
+        color: #514238;
+        line-height: 1.9;
+    }
+
+    .sahityik-lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        background: rgba(0,0,0,.92);
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .sahityik-lightbox img {
+        max-width: 95%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .sahityik-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 42px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .sahityik-gallery {
+            grid-template-columns: 1fr;
+        }
+
+        .sahityik-hero h1 {
+            font-size: 30px;
+        }
+
+        .sahityik-card img {
+            height: 280px;
+        }
+    }
+</style>
+
+
+<div class="sahityik-page">
+
+    <!-- HERO -->
+    <section class="sahityik-hero">
+
+        <h1>साहित्यिक वाटचाल</h1>
+
+        <p>
+            साहित्य, विचार आणि सामाजिक जाणीव यांच्या माध्यमातून
+            घडत गेलेला एक प्रेरणादायी प्रवास...
+        </p>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="sahityik-intro">
+
+        <h2>वैचारिक आणि साहित्यिक प्रवास</h2>
+
+        <p>
+            लेखन, वाचन, विचारमंथन आणि सामाजिक जाणीव यांच्या
+            माध्यमातून किशोर माणकापूरे यांची साहित्यिक वाटचाल
+            विकसित होत गेली.
+        </p>
+
+        <p>
+            विविध साहित्यिक, वैचारिक आणि सामाजिक कार्यक्रमांमध्ये
+            सहभागी होत त्यांनी संविधान, समाज, शिक्षण, पालकत्व
+            आणि महापुरुषांच्या विचारांविषयी सातत्याने संवाद साधला.
+        </p>
+
+    </section>
+
+
+    <!-- PHOTO SECTION -->
+    <h2 class="sahityik-title">
+        📸 साहित्यिक वाटचालीतील संस्मरणीय क्षण
+    </h2>
+
+
+    <section class="sahityik-gallery">
+
+
+        <!-- PHOTO 1 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-1.jpg') }}"
+                alt="भारतीय संविधान अमृत महोत्सवी कार्यक्रम"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    भारतीय संविधान अमृत महोत्सवी कार्यक्रम
+                </h3>
+
+                <p>
+                    महाराष्ट्र शासनाच्या सांस्कृतिक विभागाकडून
+                    आयोजित भारतीय संविधान अमृत महोत्सवी
+                    कार्यक्रमामध्ये विशेष आमंत्रण.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 2 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-2.jpg') }}"
+                alt="संविधान विषयावर विवेचन"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    संविधानाविषयी जागृती
+                </h3>
+
+                <p>
+                    प्रमुख पाहुणे म्हणून संविधानाविषयी
+                    जागृती करणारे विवेचन करताना.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 3 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-3.jpg') }}"
+                alt="संविधान जागृती कार्यक्रम"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    वैचारिक संवाद
+                </h3>
+
+                <p>
+                    संविधानाची मूल्ये आणि लोकशाहीविषयी
+                    उपस्थितांशी संवाद साधताना.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 4 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-4.jpg') }}"
+                alt="साहित्यिक आणि वैचारिक कार्यक्रम"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    साहित्यिक आणि वैचारिक व्यासपीठ
+                </h3>
+
+                <p>
+                    साहित्यिक आणि वैचारिक कार्यप्रवासातील
+                    एक संस्मरणीय क्षण.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 5 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-5.jpg') }}"
+                alt="मान्यवरांसोबतचा क्षण"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    मान्यवरांसोबत
+                </h3>
+
+                <p>
+                    विविध कार्यक्रमांमध्ये मान्यवरांसोबत
+                    घडलेला संस्मरणीय प्रसंग.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 6 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-6.jpg') }}"
+                alt="सामाजिक आणि वैचारिक कार्य"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    सामाजिक आणि वैचारिक कार्य
+                </h3>
+
+                <p>
+                    समाजातील विविध विषयांवर विचार मांडताना
+                    आणि जनजागृती करताना.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PHOTO 7 -->
+        <article class="sahityik-card">
+
+            <img
+                src="{{ url_for('static', filename='images/mama-constitution-7.jpg') }}"
+                alt="साहित्यिक वाटचालीतील क्षण"
+                onclick="openSahityikImage(this.src)"
+            >
+
+            <div class="sahityik-content">
+
+                <h3>
+                    अविस्मरणीय क्षण
+                </h3>
+
+                <p>
+                    साहित्यिक वाटचालीतील जतन करून ठेवावा असा
+                    एक सुंदर क्षण.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- HIGHLIGHT -->
+    <section class="sahityik-highlight">
+
+        <h2>
+            साहित्य आणि समाज यांचा संवाद
+        </h2>
+
+        <p>
+            साहित्य हे केवळ लेखन नसून समाजाशी संवाद साधण्याचे
+            प्रभावी माध्यम आहे. शिक्षण, संविधान, सामाजिक जाणीव
+            आणि मानवी मूल्ये यांविषयी विचार मांडत ही साहित्यिक
+            वाटचाल पुढे सुरू आहे.
+        </p>
+
+    </section>
+
+</div>
+
+
+<!-- LIGHTBOX -->
+<div
+    id="sahityikLightbox"
+    class="sahityik-lightbox"
+    onclick="closeSahityikImage()"
+>
+
+    <span class="sahityik-close">&times;</span>
+
+    <img
+        id="sahityikLightboxImage"
+        src=""
+        alt="मोठा फोटो"
+    >
+
+</div>
+
+
+<script>
+
+function openSahityikImage(imageSrc) {
+
+    document.getElementById("sahityikLightbox").style.display = "flex";
+
+    document.getElementById("sahityikLightboxImage").src = imageSrc;
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeSahityikImage() {
+
+    document.getElementById("sahityikLightbox").style.display = "none";
+
+    document.getElementById("sahityikLightboxImage").src = "";
+
+    document.body.style.overflow = "auto";
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeSahityikImage();
+    }
+
+});
+
+</script>
+
+{% endblock %}

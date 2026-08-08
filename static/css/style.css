@@ -916,6 +916,7 @@ footer {
 
     border: none;
 
+
     border-radius: 8px;
 
     background: #020b14;
@@ -953,5 +954,68 @@ footer {
     .contact-info,
     .contact-form {
         padding: 25px;
+    }
+}
+
+
+/* =====================================================
+   NAVBAR FIX
+===================================================== */
+
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .nav-link {
+    color: #eeeeee !important;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 12px !important;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #f5b800 !important;
+}
+
+
+/* साहित्यिक वाटचाल option */
+.navbar .nav-item {
+    display: block;
+}
+
+
+/* Desktop Navbar */
+@media (min-width: 992px) {
+
+    .navbar .navbar-nav {
+        flex-wrap: nowrap;
+    }
+
+    .navbar .nav-link {
+        font-size: 17px;
+    }
+}
+
+
+/* Mobile Navbar */
+@media (max-width: 991px) {
+
+    .navbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 15px !important;
+        font-size: 18px;
     }
 }

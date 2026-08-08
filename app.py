@@ -32,6 +32,11 @@ def gallery():
 def contact():
     return render_template("contact.html")
 
+@app.route("/sahityik-vatchal")
+def sahityik_vatchal():
+    return render_template("sahityik-vatchal.html")
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
