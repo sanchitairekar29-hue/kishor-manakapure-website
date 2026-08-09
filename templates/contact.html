@@ -4,9 +4,11 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>संपर्क | किशोर माणकापुरे</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>संपर्क | किशोर माणकापूरे</title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
@@ -20,7 +22,9 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ================= NAVBAR ================= -->
 
@@ -28,7 +32,7 @@
 
     <div class="logo">
 
-        <h2>किशोर माणकापुरे</h2>
+        <h2>किशोर माणकापूरे</h2>
 
         <span>अधिकृत लेखक वेबसाईट</span>
 
@@ -39,13 +43,15 @@
 
         <a href="/">मुखपृष्ठ</a>
 
-        <a href="/about">लेखक परिचय</a>
+        <a href="/author">लेखक परिचय</a>
 
         <a href="/books">पुस्तके</a>
 
         <a href="/awards">पुरस्कार</a>
 
         <a href="/gallery">गॅलरी</a>
+
+        <a href="/sahityik-vatchal">साहित्यिक वाटचाल</a>
 
         <a href="/contact" class="active">संपर्क</a>
 
@@ -81,7 +87,7 @@
     <div class="contact-container">
 
 
-        <!-- CONTACT INFORMATION -->
+        <!-- ================= CONTACT INFORMATION ================= -->
 
         <div class="contact-info">
 
@@ -96,13 +102,17 @@
 
             <div class="contact-item">
 
-                <div class="contact-icon">📧</div>
+                <div class="contact-icon">
+                    📧
+                </div>
 
                 <div>
 
                     <h3>ई-मेल</h3>
 
-                    <p>kishorkamble622@gmail.com</p>
+                    <p>
+                        kishorkamble622@gmail.com
+                    </p>
 
                 </div>
 
@@ -111,13 +121,17 @@
 
             <div class="contact-item">
 
-                <div class="contact-icon">📱</div>
+                <div class="contact-icon">
+                    📱
+                </div>
 
                 <div>
 
                     <h3>मोबाईल</h3>
 
-                    <p>+91- 9665254215</p>
+                    <p>
+                        +91-9665254215
+                    </p>
 
                 </div>
 
@@ -126,7 +140,9 @@
 
             <div class="contact-item">
 
-                <div class="contact-icon">📍</div>
+                <div class="contact-icon">
+                    📍
+                </div>
 
                 <div>
 
@@ -143,13 +159,55 @@
         </div>
 
 
-        <!-- CONTACT FORM -->
+        <!-- ================= CONTACT FORM ================= -->
 
         <div class="contact-form">
 
-            <h2>मला संदेश पाठवा</h2>
+            <h2>
+                मला संदेश पाठवा
+            </h2>
 
-            <form action="#" method="POST">
+
+            <!-- SUCCESS / ERROR MESSAGE -->
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+
+                {% if messages %}
+
+                    {% for category, message in messages %}
+
+                        <div
+                            style="
+                                padding: 14px 18px;
+                                margin-bottom: 20px;
+                                border-radius: 10px;
+                                font-weight: 600;
+                                background:
+                                {% if category == 'success' %}
+                                    #e8f7e8;
+                                {% else %}
+                                    #ffe9e9;
+                                {% endif %}
+                            "
+                        >
+
+                            {{ message }}
+
+                        </div>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            {% endwith %}
+
+
+            <!-- FORM -->
+
+            <form action="/contact" method="POST">
+
+
+                <!-- NAME -->
 
                 <div class="form-group">
 
@@ -168,6 +226,86 @@
                 </div>
 
 
+                <!-- EMAIL -->
+
                 <div class="form-group">
 
-                    <label
+                    <label for="email">
+                        आपला ई-मेल
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="आपला ई-मेल पत्ता"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        आपला संदेश
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        placeholder="आपला संदेश येथे लिहा..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="author-btn"
+                    style="border: none; cursor: pointer;"
+                >
+
+                    संदेश पाठवा
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 किशोर बाळासाहेब माणकापूरे.
+            सर्व हक्क राखीव.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
