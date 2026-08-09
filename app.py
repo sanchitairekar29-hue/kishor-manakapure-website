@@ -13,6 +13,41 @@ app.secret_key = os.environ.get("SECRET_KEY", "kishor-website-secret-key")
 def home():
     return render_template("index.html")
 
+@app.route("/sitemap.xml")
+def sitemap():
+    return """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/author</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/books</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/awards</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/gallery</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/sahityik-vatchal</loc>
+    </url>
+
+    <url>
+        <loc>https://kishor-manakpure-website.onrender.com/contact</loc>
+    </url>
+
+</urlset>"""
+
 
 @app.route("/author")
 def about():
