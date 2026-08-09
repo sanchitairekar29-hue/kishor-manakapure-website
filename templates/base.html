@@ -10,23 +10,24 @@
 
     <!-- Bootstrap -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
     <!-- Bootstrap Icons -->
 
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS -->
 
     <link rel="stylesheet"
-        href="{{ url_for('static', filename='css/style.css') }}">
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
 <!-- ================= NAVBAR ================= -->
 
@@ -37,6 +38,7 @@
         <a class="navbar-brand fw-bold text-warning fs-3" href="/">
             किशोर माणकापुरे
         </a>
+
 
         <button class="navbar-toggler"
                 type="button"
@@ -50,52 +52,76 @@
 
         </button>
 
+
         <div class="collapse navbar-collapse" id="navbarNav">
 
             <ul class="navbar-nav ms-auto">
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/">
                         मुख्यपृष्ठ
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/author">
                         लेखक परिचय
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/books">
                         पुस्तके
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/awards">
                         पुरस्कार
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/gallery">
                         गॅलरी
                     </a>
+
                 </li>
 
+
                 <!-- साहित्यिक वाटचाल -->
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/sahityik-vatchal">
                         साहित्यिक वाटचाल
                     </a>
+
                 </li>
 
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="/contact">
                         संपर्क
                     </a>
+
                 </li>
+
 
             </ul>
 
@@ -106,15 +132,17 @@
 </nav>
 
 
+
 <!-- ================= PAGE CONTENT ================= -->
 
 <main style="margin-top:90px;">
 
-{% block content %}
+    {% block content %}
 
-{% endblock %}
+    {% endblock %}
 
 </main>
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -123,26 +151,68 @@
 
     <div class="container text-center">
 
+
         <h4 class="text-warning">
             किशोर बाळासाहेब माणकापुरे
         </h4>
+
 
         <p>
             लेखक | चित्रकला शिक्षक | प्रेरणादायी विचारवंत
         </p>
 
+
+
+        <!-- ================= SOCIAL MEDIA ================= -->
+
+        <div class="mt-3 mb-3">
+
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/kishormankapure"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Instagram">
+
+    <i class="bi bi-instagram"></i>
+
+</a>
+
+
+            <!-- FACEBOOK -->
+
+            <a href="https://www.facebook.com/share/1Kor4dzwEc/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-white mx-2"
+               style="font-size:32px;"
+               aria-label="Facebook">
+
+                <i class="bi bi-facebook"></i>
+
+            </a>
+
+
+        </div>
+
+
+
         <p class="mb-0">
             © 2026 सर्व हक्क राखीव.
         </p>
+
 
     </div>
 
 </footer>
 
 
+
 <!-- Bootstrap JS -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
