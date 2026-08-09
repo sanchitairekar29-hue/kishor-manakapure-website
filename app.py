@@ -22,7 +22,7 @@ def home():
 
 
 # =========================
-# AUTHOR
+# ABOUT / AUTHOR
 # =========================
 
 @app.route("/author")
@@ -112,7 +112,7 @@ def contact():
             email_message["From"] = mail_username
             email_message["To"] = mail_receiver
 
-            # Reply केल्यावर visitor च्या email वर reply जाईल
+            # Visitor ला reply करता यावा
             email_message["Reply-To"] = email
 
             email_message.set_content(
@@ -165,13 +165,14 @@ def contact():
 
 
 # =========================
-# SITEMAP.XML
+# SITEMAP
 # =========================
 
 @app.route("/sitemap.xml")
 def sitemap():
 
     sitemap_xml = """<?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
@@ -207,6 +208,7 @@ def sitemap():
 
     return Response(
         sitemap_xml,
+        status=200,
         mimetype="application/xml"
     )
 
@@ -216,10 +218,11 @@ def sitemap():
 # =========================
 
 if __name__ == "__main__":
+
     app.run(
         host="0.0.0.0",
         port=int(
             os.environ.get("PORT", 5000)
         ),
-        debug=True
+        debug=False
     )
