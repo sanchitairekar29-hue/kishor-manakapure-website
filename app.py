@@ -152,17 +152,13 @@ def sitemap():
 # ================= ROBOTS.TXT =================
 
 @app.route("/robots.txt")
-def robots_txt():
-
-    robots_text = """User-agent: *
+def robots():
+    robots_txt = """User-agent: *
 Allow: /
 
-Sitemap: https://kishor-manakpure-website.onrender.com/sitemap.xml
+Sitemap: https://kishor-manakapure-website.onrender.com/sitemap.xml
 """
-
-    return robots_text, 200, {
-        "Content-Type": "text/plain"
-    }
+    return robots_txt, 200, {"Content-Type": "text/plain"}
 
 
 if __name__ == "__main__":

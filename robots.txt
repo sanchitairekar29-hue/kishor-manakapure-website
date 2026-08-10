@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kishor-manakapure-website.onrender.com/sitemap.xml
