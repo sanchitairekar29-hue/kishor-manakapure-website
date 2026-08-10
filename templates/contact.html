@@ -168,39 +168,31 @@
             </h2>
 
 
-            <!-- SUCCESS / ERROR MESSAGE -->
+            <!-- ================= SUCCESS / ERROR MESSAGE ================= -->
 
-            {% with messages = get_flashed_messages(with_categories=true) %}
+{% with messages = get_flashed_messages(with_categories=true) %}
 
-                {% if messages %}
+    {% if messages %}
 
-                    {% for category, message in messages %}
+        {% for category, message in messages %}
 
-                        <div
-                            style="
-                                padding: 14px 18px;
-                                margin-bottom: 20px;
-                                border-radius: 10px;
-                                font-weight: 600;
-                                background:
-                                {% if category == 'success' %}
-                                    #e8f7e8;
-                                {% else %}
-                                    #ffe9e9;
-                                {% endif %}
-                            "
-                        >
-
-                            {{ message }}
-
-                        </div>
-
-                    {% endfor %}
-
+            <div class="flash-message
+                {% if category == 'success' %}
+                    flash-success
+                {% else %}
+                    flash-error
                 {% endif %}
+            ">
 
-            {% endwith %}
+                {{ message }}
 
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
 
             <!-- FORM -->
 
