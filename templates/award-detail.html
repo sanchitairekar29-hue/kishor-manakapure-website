@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>सन्मान | किशोर माणकापुरे</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+
+        .award-detail {
+            min-height: 100vh;
+            background: #f8f5ef;
+            padding: 45px 20px 70px;
+            text-align: center;
+        }
+
+        .award-detail h1 {
+            color: #3a2818;
+            margin-bottom: 10px;
+        }
+
+        .gold-line {
+            width: 90px;
+            height: 4px;
+            background: #c99a3d;
+            margin: 15px auto 30px;
+            border-radius: 10px;
+        }
+
+        .big-award-box {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+        }
+
+        .big-award-box img {
+            width: 100%;
+            max-height: 78vh;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .navigation {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .navigation a {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #8b5a2b;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+
+        .navigation a:hover {
+            background: #b17a22;
+        }
+
+        .back {
+            background: #333 !important;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <h2>किशोर माणकापुरे</h2>
+
+        <span>अधिकृत लेखक वेबसाईट</span>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">मुख्यपृष्ठ</a>
+        <a href="/author">लेखक परिचय</a>
+        <a href="/books">पुस्तके</a>
+        <a href="/awards">पुरस्कार</a>
+        <a href="/gallery">गॅलरी</a>
+        <a href="/contact">संपर्क</a>
+
+    </div>
+
+</nav>
+
+
+<!-- BIG PHOTO -->
+
+<section class="award-detail">
+
+    <h1>
+        सन्मान {{ award_id }}
+    </h1>
+
+    <div class="gold-line"></div>
+
+
+    <div class="big-award-box">
+
+        <img
+            src="{{ url_for('static', filename='images/award' ~ award_id ~ '.jpg') }}"
+            alt="सन्मान {{ award_id }}"
+        >
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+
+        {% if award_id > 1 %}
+
+        <a href="/award/{{ award_id - 1 }}">
+            ← मागील पुरस्कार
+        </a>
+
+        {% endif %}
+
+
+        <a href="/sanman-gatha" class="back">
+            सर्व पुरस्कार
+        </a>
+
+
+        {% if award_id < 8 %}
+
+        <a href="/award/{{ award_id + 1 }}">
+            पुढील पुरस्कार →
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 किशोर माणकापुरे | सर्व हक्क राखीव
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

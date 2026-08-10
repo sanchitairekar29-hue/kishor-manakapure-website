@@ -34,6 +34,26 @@ def books():
 def awards():
     return render_template("awards.html")
 
+@app.route("/sanman-gatha")
+def sanman_gatha():
+    return render_template("sanman-gatha.html")
+
+
+@app.route("/award-details")
+def award_details():
+    return render_template("award-details.html")
+
+@app.route("/award/<int:award_id>")
+def award_detail(award_id):
+
+    if award_id < 1 or award_id > 8:
+        return "Award not found", 404
+
+    return render_template(
+        "award-detail.html",
+        award_id=award_id
+    )
+
 
 @app.route("/gallery")
 def gallery():

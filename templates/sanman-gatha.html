@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>सन्मानगाथा | किशोर माणकापुरे</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+
+        .sanman-page {
+            padding: 55px 20px 80px;
+            background: #f8f5ef;
+            min-height: 100vh;
+        }
+
+        .sanman-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .sanman-heading .small-title {
+            color: #a06a16;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .sanman-heading h1 {
+            font-size: 42px;
+            margin: 0;
+            color: #3a2818;
+        }
+
+        .gold-line {
+            width: 90px;
+            height: 4px;
+            background: #c99a3d;
+            margin: 18px auto;
+            border-radius: 10px;
+        }
+
+        .sanman-heading p {
+            max-width: 700px;
+            margin: auto;
+            color: #66584b;
+            line-height: 1.8;
+        }
+
+        /* ================= GALLERY ================= */
+
+        .sanman-gallery {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .sanman-card {
+            background: white;
+            border-radius: 18px;
+            padding: 12px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .sanman-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+        }
+
+        .sanman-card img {
+            width: 100%;
+            height: 300px;
+
+            object-fit: contain;
+
+            background: #f5f1ea;
+
+            border-radius: 12px;
+
+            display: block;
+        }
+
+        .sanman-card-content {
+            text-align: center;
+            padding: 18px 10px 12px;
+        }
+
+        .sanman-card-content h2 {
+            font-size: 21px;
+            margin: 0 0 10px;
+            color: #3a2818;
+        }
+
+        .sanman-card-content p {
+            margin: 0 0 16px;
+            color: #756657;
+            font-size: 14px;
+        }
+
+        .view-award {
+            display: inline-block;
+
+            padding: 10px 22px;
+
+            border-radius: 25px;
+
+            background: #8b5a2b;
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .view-award:hover {
+            background: #b17a22;
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .sanman-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .sanman-page {
+                padding: 35px 15px 60px;
+            }
+
+            .sanman-heading h1 {
+                font-size: 32px;
+            }
+
+            .sanman-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .sanman-card img {
+                height: 350px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <h2>किशोर माणकापुरे</h2>
+
+        <span>अधिकृत लेखक वेबसाईट</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            मुख्यपृष्ठ
+        </a>
+
+        <a href="/author">
+            लेखक परिचय
+        </a>
+
+        <a href="/books">
+            पुस्तके
+        </a>
+
+        <a href="/awards" class="active">
+            पुरस्कार
+        </a>
+
+        <a href="/gallery">
+            गॅलरी
+        </a>
+
+        <a href="/contact">
+            संपर्क
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= PAGE ================= -->
+
+<section class="sanman-page">
+
+
+    <div class="sanman-heading">
+
+        <p class="small-title">
+            गौरव आणि सन्मान
+        </p>
+
+        <h1>
+            सन्मानगाथा
+        </h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+            साहित्य, शिक्षण, कला आणि सामाजिक कार्याच्या
+            प्रवासातील काही अविस्मरणीय गौरवक्षण.
+        </p>
+
+    </div>
+
+
+    <!-- ================= AWARDS ================= -->
+
+    <div class="sanman-gallery">
+
+
+        <!-- AWARD 1 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award1.jpg') }}"
+                alt="पुरस्कार १"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान १
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/1"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 2 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award2.jpg') }}"
+                alt="पुरस्कार २"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान २
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/2"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 3 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award3.jpg') }}"
+                alt="पुरस्कार ३"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ३
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/3"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 4 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award4.jpg') }}"
+                alt="पुरस्कार ४"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ४
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/4"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 5 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award5.jpg') }}"
+                alt="पुरस्कार ५"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ५
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/5"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 6 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award6.jpg') }}"
+                alt="पुरस्कार ६"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ६
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/6"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 7 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award7.jpg') }}"
+                alt="पुरस्कार ७"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ७
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/7"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AWARD 8 -->
+
+        <div class="sanman-card">
+
+            <img
+                src="{{ url_for('static', filename='images/award8.jpg') }}"
+                alt="पुरस्कार ८"
+            >
+
+            <div class="sanman-card-content">
+
+                <h2>
+                    सन्मान ८
+                </h2>
+
+                <p>
+                    गौरवाचा अविस्मरणीय क्षण
+                </p>
+
+                <a
+                    href="/award/8"
+                    class="view-award"
+                >
+                    मोठा फोटो पहा →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 किशोर माणकापुरे | सर्व हक्क राखीव
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
