@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, send_from_directory
+from flask import Flask, render_template, request, flash
 import os
 import smtplib
 from email.message import EmailMessage
@@ -7,10 +7,8 @@ app = Flask(__name__)
 
 @app.route("/google169b32e847ac0d7d.html")
 def google_verification():
-    return send_from_directory(
-        app.root_path,
-        "google169b32e847ac0d7d.html"
-    )
+    return "google-site-verification: google169b32e847ac0d7d.html"
+    
 app.secret_key = os.environ.get(
     "SECRET_KEY",
     "kishor-website-secret-key"
