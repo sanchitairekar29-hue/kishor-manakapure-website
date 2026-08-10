@@ -11,7 +11,6 @@ def google_verification():
         app.root_path,
         "google169b32e847ac0d7d.html"
     )
-
 app.secret_key = os.environ.get(
     "SECRET_KEY",
     "kishor-website-secret-key"
