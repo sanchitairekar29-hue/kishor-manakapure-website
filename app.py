@@ -111,41 +111,58 @@ def contact():
 
 @app.route("/sitemap.xml")
 def sitemap():
+
     sitemap_xml = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/</loc>
+<loc>https://kishor-manakpure-website.onrender.com/</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/author</loc>
+<loc>https://kishor-manakpure-website.onrender.com/author</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/books</loc>
+<loc>https://kishor-manakpure-website.onrender.com/books</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/awards</loc>
+<loc>https://kishor-manakpure-website.onrender.com/awards</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/gallery</loc>
+<loc>https://kishor-manakpure-website.onrender.com/gallery</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/sahityik-vatchal</loc>
+<loc>https://kishor-manakpure-website.onrender.com/sahityik-vatchal</loc>
 </url>
 
 <url>
-<loc>https://kishor-manakapure-website.onrender.com/contact</loc>
+<loc>https://kishor-manakpure-website.onrender.com/contact</loc>
 </url>
 
 </urlset>"""
 
     return sitemap_xml, 200, {
         "Content-Type": "application/xml"
+    }
+
+
+# ================= ROBOTS.TXT =================
+
+@app.route("/robots.txt")
+def robots_txt():
+
+    robots_text = """User-agent: *
+Allow: /
+
+Sitemap: https://kishor-manakpure-website.onrender.com/sitemap.xml
+"""
+
+    return robots_text, 200, {
+        "Content-Type": "text/plain"
     }
 
 
